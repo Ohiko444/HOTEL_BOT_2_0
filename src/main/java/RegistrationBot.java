@@ -57,7 +57,7 @@ public class RegistrationBot extends TelegramLongPollingBot {
 
         try {
             this.execute(new SetMyCommands(botCommandList, new BotCommandScopeDefault(), null));
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/Hotel", "root", "zerefo98");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/******", "****", "****");
         } catch (SQLException e) {
             e.printStackTrace();
         } catch (TelegramApiException e) {
@@ -453,7 +453,7 @@ public class RegistrationBot extends TelegramLongPollingBot {
 
             StringBuilder result = new StringBuilder();
 
-            try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/Hotel", "root", "zerefo98")) {
+            try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/*****", "*****", "********")) {
                 String query = "SELECT Booking.ID_booking, Booking.Start_date_booking, Booking.End_date_booking, Hotel_room.Number_room, Hotel_room.Price_room, Hotel_room.Number_persons_room, Hotel_room.Features_room, Hotel.Name_hotel, Hotel.Adress_hotel " +
                         "FROM Booking " +
                         "JOIN Hotel_room ON Booking.ID_room = Hotel_room.ID_room " +
@@ -505,7 +505,7 @@ public class RegistrationBot extends TelegramLongPollingBot {
 
     public static void send(String gmail, int code) {
 
-        String from = "dorapuzyreva@gmail.com";
+        String from = "*******@gmail.com";
         String to = gmail;
         String host = "smtp.gmail.com";
         String smtpPort = "465";
@@ -521,7 +521,7 @@ public class RegistrationBot extends TelegramLongPollingBot {
                 new Authenticator() {
                     @Override
                     protected PasswordAuthentication getPasswordAuthentication() {
-                        return new PasswordAuthentication(from, "bdvbswkblppkpavm");
+                        return new PasswordAuthentication(from, "***********");
                     }
                 }
         );
@@ -562,12 +562,12 @@ public class RegistrationBot extends TelegramLongPollingBot {
 
     @Override
     public String getBotUsername() {
-        return "HOTEL BOT";
+        return "********";
     }
 
     @Override
     public String getBotToken() {
-        return "6236203145:AAG54l_I53uWNvDrenY09kMvoXyUVURrjns";
+        return "**************************";
     }
 
 
